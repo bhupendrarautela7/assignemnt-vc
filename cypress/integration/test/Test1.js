@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 import 'cypress-iframe';
 
-describe('launch application ', () => {
+describe('launch application and search product -  Testcase 1', () => {
 
     
   it('Search the product', () => {
@@ -50,7 +50,10 @@ describe('launch application ', () => {
      cy.wait(2000)
      
 
-     // NOTE : From here the API request is getting  Fail so unable to proceed here......
+     // NOTE : From here the API request is getting Fail, So unable to proceed here......
+     //POST https://apiv2.vestiairecollective.com/sessions/?x-siteid=10&x-language=de&x-currency=EUR 
+     //504 (Gateway Timeout)
+    
 
 
 
@@ -61,7 +64,7 @@ describe('launch application ', () => {
 
 })
 
-describe('Favorite Page', () => {
+describe('Favorite Page - Test case 2', () => {
   it('displays currency symbol correctly based on JSON data', () => {
     cy.visit('https://us.vestiairecollective.com/favorites/16999609/')
 
@@ -86,7 +89,7 @@ describe('Favorite Page', () => {
   })
 })
 
-describe('Filtering items by location', () => {
+describe('Filtering items by location - Test case 3', () => {
   it('updates items based on filter selection', () => {
     // Navigate to the shoulder bags page with Women gender and Shipped From filter
     cy.visit('https://us.vestiairecollective.com/women-bags/shoulder-bags/#gender=Women%231');
